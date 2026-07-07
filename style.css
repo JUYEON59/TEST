@@ -1,53 +1,103 @@
+body {
+    font-family: Arial, "Noto Sans KR", sans-serif;
+    color: #111;
+}
+header {
+    position: relative;
+    z-index: 10;
+}
 .top-bar {
-    background-color: rgb(156, 189, 231);
-    padding-top: 35px; padding-bottom: 35px;
-    padding-left: 100px; padding-right: 100px;
+    height: 62px;
+    padding: 0 54px;
+    background: linear-gradient(90deg, #f7f7f7 0%, #9fc5df 62%, #82add0 100%);
     display: flex;
+    align-items: center;
     justify-content: space-between;
     position: relative;
 }
-
 .logo-box {
-    width: 250px;
-    display: flex; gap: 10px;
+    width: 172px;
+    display: flex; 
+    align-items: center;
 }
 .logo-box img {
-    width: 100%; height: 100%;
+    width: 100%;
 }
-
+/* 여기서 height: 100%;이 왜 들어갈까 */
 .menu01 {
-    width: 500px;
+    width: 388px;
+    height: 100%;
 }
+/* 여기서 height: 100%;이 왜 들어갈까 */
 .menu01-ul {
     display: flex;  
-    justify-content: space-between;
+    gap: 36px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
+/* 여기서 line-height: 15px;이 왜 들어갈까 */
 .m01-item {
-    color: #000; font-size: 15px;
+    color: #000; 
+    font-size: 11px;
     font-weight: 700;
+    line-height: 15px;
 }
 .m01-item:hover > a {
     text-decoration: underline;
 }
-
 .menu02 {
+    border-top: 1px solid rgba(0, 0, 0, 0);
     height: 0;
-    overflow: hidden;
     transition: 0.5s;
+    overflow: hidden;
     position: absolute;
-    left: 0; right: 0; top: 100%;
+    left: 0;
+    right: 0; 
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
 }
 .menu01:hover > .menu02 {
+    border-top: 1px solid rgba(0, 0, 0, 1);
     height: 400px;
+}
+.menu02 > .container {
+    width: 1620;
+    display: flex;
+}
+.mn02-img-box {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mn02-img-item {
+    width: 300px;
+    height: 300px;
+}
+/* 띄어쓰기 안하는 이유가 있는지 */
+.mn02-img-item > a {height: 100%;}
+.mn02-img-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mn02-nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .m02-item:hover > a {
-color: blue;
-text-decoration: underline;
+    color: blue;
+    text-decoration: underline;
 }
 
 .m02-item:hover > .mn03-nav {
-display: flex;
+    display: flex;
 }
 
 .user-box {
