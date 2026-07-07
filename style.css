@@ -4,20 +4,15 @@
     padding-left: 100px; padding-right: 100px;
     display: flex;
     justify-content: space-between;
-}
-.top-bar:hover {
-    padding: calc(35px + 8px);
+    position: relative;
 }
 
 .logo-box {
-    width: 300px;
+    width: 250px;
     display: flex; gap: 10px;
 }
-.logo-item {
-    width: 200px;
-}
-.logo-item > img {
-    width: 100%; height: 100% ;
+.logo-box img {
+    width: 100%; height: 100%;
 }
 
 .menu01 {
@@ -31,24 +26,32 @@
     color: #000; font-size: 15px;
     font-weight: 700;
 }
-.m01-item:hover {
+.m01-item:hover > a {
     text-decoration: underline;
 }
 
 .menu02 {
-    border-top: 1px solid rgba(0, 0, 0, 0);
     height: 0;
     overflow: hidden;
     transition: 0.5s;
+    position: absolute;
     left: 0; right: 0; top: 100%;
 }
 .menu01:hover > .menu02 {
-    border-top: 1px solid rgba(0, 0, 0, 1);
     height: 400px;
 }
 
+.m02-item:hover > a {
+color: blue;
+text-decoration: underline;
+}
+
+.m02-item:hover > .mn03-nav {
+display: flex;
+}
+
 .user-box {
-    width: 300px;
+    width: 250px;
 }
 .user-box-ul {
     display: flex; gap: 15px;
@@ -59,4 +62,11 @@
     font-weight: 700;
 }
 .user-item04 > img {
+}
+.user-item02 > a:hover {
+    background-color: #111;
+    color: #fff;
+}
+.user-item03 {
+    display: ;
 }
